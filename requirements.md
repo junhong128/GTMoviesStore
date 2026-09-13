@@ -17,7 +17,7 @@
 4. catalog [DONE]
 5. search (by title) [DONE]
 6. shopping cart (add, remove)
-7. movie page (about, reviews, write/edit/delete reviews, report reviews)
+7. movie page ($about, $reviews, $write/edit/delete reviews, report reviews) [DONE]
 8. orders
 
 ## GUI
