@@ -44,6 +44,12 @@
               <a class="btn btn-danger crud-btn" href="{% url 'movies.delete_review' id=template_data.movie.id review_id=review.id %}">Delete
               </a>
             {% endif %}
+            <a class="btn btn-danger crud-btn" href="{% url 'movies.report_review' id=template_data.movie.id review_id=review.id %}">Report
+            </a>
+
+            {% if review.id == template_data.reported_review_id %}
+              <p style="color: var(--title);">Review has been reported. Our admins will review it soon.</p>
+            {% endif %}
           </li>
           {% endfor %}
         </ul>

@@ -1,6 +1,7 @@
 from django.shortcuts import render, redirect, get_object_or_404
 from .models import Movie, Review
 from django.contrib.auth.decorators import login_required
+from django.contrib import messages
 
 def index(request):
     search_term = request.GET.get('search')
@@ -21,6 +22,7 @@ def show(request, id):
     template_data['title'] = movie.name
     template_data['movie'] = movie
     template_data['reviews'] = reviews
+    template_data['reported_review_id'] = request.session.pop("reported_review_id", None)
     return render(request, 'show.html', {'template_data': template_data})
 
 @login_required
@@ -45,8 +47,7 @@ def edit_review(request, id, review_id):
         template_data = {}
         template_data['title'] = 'Edit Review'
         template_data['review'] = review
-        return render(request, 'edit_review.html',
-            {'template_data': template_data})
+        return render(request, 'edit_review.html', {'template_data': template_data})
     elif request.method == 'POST' and request.POST['comment'] != '':
         review = Review.objects.get(id=review_id)
         review.comment = request.POST['comment']
@@ -60,3 +61,13 @@ def delete_review(request, id, review_id):
     review = get_object_or_404(Review, id=review_id, user=request.user)
     review.delete()
     return redirect('movies.show', id=id)
+
+def report_review(request, id, review_id):
+    review = get_object_or_404(Review, id=review_id)
+    review.reports += 1
+    review.save()
+
+    request.session["reported_review_id"] = review_id
+    # messages.success(request, "Review has been reported. Our admins will review it soon.", )
+    return redirect('movies.show', id=id)
+
