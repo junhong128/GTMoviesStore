@@ -115,17 +115,20 @@
                 position: relative;
                 overflow: hidden;
                 border-radius: 10%;
-                width: 240px;
-                height: 360px;
-                border: solid 2px red;
+                width: 20vw;
+                height: 60vh;
+                box-shadow: 0 20px 36px rgba(0,0,0,0.25);
+                left: 22%;
             }
 
             .hero-posters img {
                 position: absolute;
                 width: 100%;
                 height: 100%;
-                object-fit: 100%;
-                animation: rotatePosters 3s infinite;
+                inset: 0;
+                object-fit: cover;
+                opacity: 0;
+                animation: rotatePosters 6s infinite;
             }
 
             .hero-posters img:nth-child(1) {
@@ -141,17 +144,27 @@
             }
 
             @keyframes rotatePosters {
-                0%, 28% {
+                0%, 30% {
                     opacity: 1;
                     transform: scale(1);
                 }
 
-                30%, 100% {
+                33.33%, 100% {
                     opacity: 0;
                     transform: scale(1.02);
                 }
             }
 
+            #about h2 {
+                margin-left: 2%;
+                text-decoration: underline;
+                font-size: 2rem;
+            }
+
+            #about p {
+                margin-left: 2%;
+                font-size: 1.2rem;
+            }
         </style>
     </head>
     <body>
@@ -179,9 +192,9 @@
             <tr class="hero">
                 <td colspan="1" style="min-width: 30vw;">
                     <div class="hero-posters">
-                        <img src="../../images/breaking_bad.jpeg" alt="breaking bad poster">
-                        <img src="../../images/odyssey.jpeg" alt="odyssey poster">
-                        <img src="../../images/obsession.jpeg" alt="obsession poster">
+                        <img src="https://junhong128.pythonanywhere.com/static/breaking_bad.jpeg" alt="breaking bad poster">
+                        <img src="https://junhong128.pythonanywhere.com/static/odyssey.jpeg" alt="odyssey poster">
+                        <img src="https://junhong128.pythonanywhere.com/static/obsession.jpeg" alt="obsession poster">
                     </div>
                 </td>
 
@@ -193,11 +206,15 @@
                 </td>
 
             </tr>
-
-            <tr id="#about">
-            </tr>
-
         </table>
+
+        <section id="about">
+            <h2>About</h2>
+                <p class="hero-text">Access information about all your favorite movies and place orders to purchase them at the lowest prices available for Georgia Tech students. We offer a comprehensive list of independent reviews on each movie so you can make the best judgement before purchasing anything. Access information about all your favorite movies and place orders to purchase them at the lowest prices available for Georgia Tech students. We offer a comprehensive list of independent reviews on each movie so you can make the best judgement before purchasing anything. Access information about all your favorite movies and place orders to purchase them at the lowest prices available for Georgia Tech students. We offer a comprehensive list of independent reviews on each movie so you can make the best judgement before purchasing anything. </p>
+                <p class="hero-text">Access information about all your favorite movies and place orders to purchase them at the lowest prices available for Georgia Tech students. We offer a comprehensive list of independent reviews on each movie so you can make the best judgement before purchasing anything. Access information about all your favorite movies and place orders to purchase them at the lowest prices available for Georgia Tech students. We offer a comprehensive list of independent reviews on each movie so you can make the best judgement before purchasing anything. Access information about all your favorite movies and place orders to purchase them at the lowest prices available for Georgia Tech students. We offer a comprehensive list of independent reviews on each movie so you can make the best judgement before purchasing anything. </p>
+                <p class="hero-text">Access information about all your favorite movies and place orders to purchase them at the lowest prices available for Georgia Tech students. We offer a comprehensive list of independent reviews on each movie so you can make the best judgement before purchasing anything. Access information about all your favorite movies and place orders to purchase them at the lowest prices available for Georgia Tech students. We offer a comprehensive list of independent reviews on each movie so you can make the best judgement before purchasing anything. Access information about all your favorite movies and place orders to purchase them at the lowest prices available for Georgia Tech students. We offer a comprehensive list of independent reviews on each movie so you can make the best judgement before purchasing anything. </p>
+                <p class="hero-text">Access information about all your favorite movies and place orders to purchase them at the lowest prices available for Georgia Tech students. We offer a comprehensive list of independent reviews on each movie so you can make the best judgement before purchasing anything. Access information about all your favorite movies and place orders to purchase them at the lowest prices available for Georgia Tech students. We offer a comprehensive list of independent reviews on each movie so you can make the best judgement before purchasing anything. Access information about all your favorite movies and place orders to purchase them at the lowest prices available for Georgia Tech students. We offer a comprehensive list of independent reviews on each movie so you can make the best judgement before purchasing anything. </p>
+        </section>
 
 
     </body>
