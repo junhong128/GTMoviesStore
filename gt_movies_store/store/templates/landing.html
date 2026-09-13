@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>GT Movies Store</title>
+
+        <style>
+            :root {
+                /* let's do gt colors */
+                --bg: #051E39;
+                --text: whitesmoke;
+                --title: #B39051;
+            }
+
+            body {
+                font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+                color: var(--text);
+                background: var(--bg);
+                font: 16px;
+                margin: 0;
+            }
+
+            h1, h2, a {
+                color: var(--title);
+                text-decoration: none;
+            }
+
+            a {
+                font-style: italic;
+                position: relative;
+                display: inline-block;
+                text-decoration: none;
+            }
+
+            a::after {
+                content: "";
+                position: absolute;
+                left: 0;
+                bottom: -4px;
+                width: 0;
+                height: 3px;
+                background: var(--title);
+                transition: width 0.25s ease;
+            }
+
+            a:hover::after {
+                width: 100%;
+            }
+
+            table {
+                width: 100%;
+                border: none;
+                border-collapse: collapse;
+                padding: none;
+                margin: none;
+            }
+
+            td {
+                text-align: center;
+                /* border: 2px red solid; */
+            }
+
+            .header {
+                background-color: var(--text);
+                height: 10vh;
+            }
+
+            .title {
+                padding-left: 2%;
+                text-align: left;
+            }
+
+            .hero {
+                height: 90vh;
+                overflow: hidden;
+                position: relative;
+            }
+
+            .hero-title {
+                color: var(--text);
+                margin-top: 15%;
+                font-size: 2.8rem;
+            }
+            
+            .hero-text {
+                color: var(--text);
+                font-size: 1.2rem;
+            }
+
+            .hero-btn {
+                background-color: var(--bg);
+                color: var(--text);
+                font-size: 1.4rem;
+                padding: 12px;
+                border: none;
+                width: 10vw;
+                margin-top: 2%;
+            }
+
+            .quarter-circle {
+                position: absolute;
+                content: "";
+                top: -70%;
+                right: -30%;
+                width: 90%;
+                height: 155%;
+                pointer-events: none;
+                background-color: var(--title);
+                border-radius: 100%;
+                z-index: -10000;
+            }
+
+            .hero-posters {
+                position: relative;
+                overflow: hidden;
+                border-radius: 10%;
+                width: 240px;
+                height: 360px;
+                border: solid 2px red;
+            }
+
+            .hero-posters img {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                object-fit: 100%;
+                animation: rotatePosters 3s infinite;
+            }
+
+            .hero-posters img:nth-child(1) {
+                animation-delay: 0s;
+            }
+
+            .hero-posters img:nth-child(2) {
+                animation-delay: 2s;
+            }
+
+            .hero-posters img:nth-child(3) {
+                animation-delay: 4s;
+            }
+
+            @keyframes rotatePosters {
+                0%, 28% {
+                    opacity: 1;
+                    transform: scale(1);
+                }
+
+                30%, 100% {
+                    opacity: 0;
+                    transform: scale(1.02);
+                }
+            }
+
+        </style>
+    </head>
+    <body>
+        <table>
+            <tr class="header">
+                <td>
+                    <h1 class="title">Georgia Tech Movies Store</h1>
+                </td>
+                <td>
+                    <h2>
+                        <a href="#about">About</a>
+                    </h2>
+                </td>
+                <td>
+                    <h2>
+                        <a href="/register">Regiser</a>
+                    </h2>
+                </td>
+                <td>
+                    <h2>
+                        <a href="/login">Login</a>
+                    </h2>
+                </td>
+            </tr>
+            <tr class="hero">
+                <td colspan="1" style="min-width: 30vw;">
+                    <div class="hero-posters">
+                        <img src="../../images/breaking_bad.jpeg" alt="breaking bad poster">
+                        <img src="../../images/odyssey.jpeg" alt="odyssey poster">
+                        <img src="../../images/obsession.jpeg" alt="obsession poster">
+                    </div>
+                </td>
+
+                <td colspan="3" style="vertical-align: top;">
+                    <div class="quarter-circle"></div>
+                    <h2 class="hero-title">Buy & Watch Your <br>Favorite Shows Now</h2>
+                    <p class="hero-text">Access information about all your favorite movies and place orders to <br>purchase them at the lowest prices available for Georgia Tech students. <br>We offer a comprehensive list of independent reviews on each movie <br>so you can make the best judgement before purchasing anything.</p>
+                    <button class="hero-btn">Get Started</button>
+                </td>
+
+            </tr>
+
+            <tr id="#about">
+            </tr>
+
+        </table>
+
+
+    </body>
+</html>
