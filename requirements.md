@@ -11,11 +11,11 @@
 4. CRUD orders
 
 ## user pages
-1. landing
-2. register
-3. login
-4. catalog
-5. search (by title)
+1. landing [DONE]
+2. register [DONE]
+3. login [DONE]
+4. catalog [DONE]
+5. search (by title) [DONE]
 6. shopping cart (add, remove)
 7. movie page (about, reviews, write/edit/delete reviews, report reviews)
 8. orders

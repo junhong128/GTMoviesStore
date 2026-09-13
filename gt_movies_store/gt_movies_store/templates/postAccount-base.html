@@ -51,7 +51,7 @@
             }
 
             table {
-                width: 100%;
+                min-width: 100vw;
                 border: none;
                 border-collapse: collapse;
                 padding: none;
@@ -66,6 +66,11 @@
             .header {
                 background-color: var(--text);
                 height: 10vh;
+            }
+
+            .header h2 {
+                font-size: 1.5rem;
+                font-weight: bold;
             }
 
             .title {
@@ -91,17 +96,17 @@
                 </td>
                 <td>
                     <h2>
-                        <a href="#about">About</a>
+                        <a href="/movies">Movies</a>
                     </h2>
                 </td>
                 <td>
                     <h2>
-                        <a href="/register">Regiser</a>
+                        <a href="/accounts/signup">Shopping Cart</a>
                     </h2>
                 </td>
                 <td>
                     <h2>
-                        <a href="/login">Login</a>
+                        <a href="/accounts/signout">Sign Out</a>
                     </h2>
                 </td>
             </tr>
