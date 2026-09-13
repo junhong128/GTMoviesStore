@@ -34,10 +34,17 @@
     </div>
     <div class="row">
       <div class="text-end">
-        <a class="btn btn-outline-secondary mb-2" style="color: whitesmoke;">
-            <b>Total to pay:</b> 
+        <a href="{% url 'cart.purchase' %}" class="btn btn-outline-secondary mb-2" style="color: whitesmoke;">
+            <b>Purchase:</b> 
             ${{ template_data.cart_total }}
         </a>
+        {% if template_data.movies_in_cart|length > 0 %}
+        <a href="{% url 'cart.clear' %}">
+          <button class="btn mb-2" style="color: whitesmoke;">
+            Remove all movies from Cart
+          </button>
+        </a>
+        {% endif %}
       </div>
     </div>
   </div>
